@@ -15,6 +15,9 @@
 		E7BAB83123A0C1E8007AF12E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BAB82F23A0C1E8007AF12E /* LaunchScreen.storyboard */; };
 		E7BAB83C23A0C1E8007AF12E /* XCTest2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAB83B23A0C1E8007AF12E /* XCTest2Tests.swift */; };
 		E7BAB84723A0C1E9007AF12E /* XCTest2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAB84623A0C1E9007AF12E /* XCTest2UITests.swift */; };
+		E7BAB85523A0C54B007AF12E /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAB85423A0C54B007AF12E /* GitHubRepository.swift */; };
+		E7BAB85723A0C640007AF12E /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAB85623A0C640007AF12E /* GitHubAPIClient.swift */; };
+		E7BAB85923A0D9D5007AF12E /* GitHubRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAB85823A0D9D5007AF12E /* GitHubRepositoryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		E7BAB84223A0C1E8007AF12E /* XCTest2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCTest2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BAB84623A0C1E9007AF12E /* XCTest2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest2UITests.swift; sourceTree = "<group>"; };
 		E7BAB84823A0C1E9007AF12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7BAB85423A0C54B007AF12E /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		E7BAB85623A0C640007AF12E /* GitHubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
+		E7BAB85823A0D9D5007AF12E /* GitHubRepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				E7BAB82D23A0C1E8007AF12E /* Assets.xcassets */,
 				E7BAB82F23A0C1E8007AF12E /* LaunchScreen.storyboard */,
 				E7BAB83223A0C1E8007AF12E /* Info.plist */,
+				E7BAB85423A0C54B007AF12E /* GitHubRepository.swift */,
+				E7BAB85623A0C640007AF12E /* GitHubAPIClient.swift */,
+				E7BAB85823A0D9D5007AF12E /* GitHubRepositoryManager.swift */,
 			);
 			path = XCTest2;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BAB85723A0C640007AF12E /* GitHubAPIClient.swift in Sources */,
+				E7BAB85523A0C54B007AF12E /* GitHubRepository.swift in Sources */,
 				E7BAB82923A0C1E2007AF12E /* ViewController.swift in Sources */,
 				E7BAB82523A0C1E2007AF12E /* AppDelegate.swift in Sources */,
+				E7BAB85923A0D9D5007AF12E /* GitHubRepositoryManager.swift in Sources */,
 				E7BAB82723A0C1E2007AF12E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QD6UAJ393W;
 				INFOPLIST_FILE = XCTest2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QD6UAJ393W;
 				INFOPLIST_FILE = XCTest2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QD6UAJ393W;
 				INFOPLIST_FILE = XCTest2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QD6UAJ393W;
 				INFOPLIST_FILE = XCTest2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
