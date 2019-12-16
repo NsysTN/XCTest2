@@ -17,6 +17,7 @@ class XCTest2UITests: XCTestCase {
         continueAfterFailure = false
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        XCUIApplication().launch()
     }
 
     override func tearDown() {
@@ -30,6 +31,50 @@ class XCTest2UITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func test必須(){
+        
+        let app = XCUIApplication()
+        let txt1aiTextField = app.textFields["txt1ai"]
+        let txt2aiTextField = app.textFields["txt2ai"]
+        let btnL = app.buttons["btnTxtLblai"]
+        let lblAlabel = app.staticTexts["lblAai"]
+
+        txt1aiTextField.tap()
+        //txt1aiTextField.typeText("123")
+        
+        txt2aiTextField.tap()
+        //txt2aiTextField.typeText("456")
+
+        btnL.tap()
+
+        XCTAssertEqual(lblAlabel.label, "値を入力してください")
+        
+    }
+
+    func testボタン押下(){
+        
+        let app = XCUIApplication()
+        let txt1aiTextField = app.textFields["txt1ai"]
+        let txt2aiTextField = app.textFields["txt2ai"]
+        let btnL = app.buttons["btnTxtLblai"]
+        let lblAlabel = app.staticTexts["lblAai"]
+
+        txt1aiTextField.tap()
+        txt1aiTextField.typeText("123")
+        
+        txt2aiTextField.tap()
+        txt2aiTextField.typeText("456")
+
+        btnL.tap()
+
+        XCTAssertEqual(lblAlabel.label, "123 456")
+        
+    }
+    
+    func test画面(){
+        
     }
 
     func testLaunchPerformance() {

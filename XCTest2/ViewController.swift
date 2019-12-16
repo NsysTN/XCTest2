@@ -8,11 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol GitHubAPIClientProtocol {
+    func fetchRepositories(user: String, handler: @escaping([GitHubRepository]?) -> Void)
+}
+
+class ViewController: UIViewController ,UITableViewDataSource{
     
+    @IBOutlet weak var txt1: UITextField!
+    @IBOutlet weak var txt2: UITextField!
+    @IBOutlet weak var txt3: UITextField!
+    @IBOutlet weak var btnTxtLbl: UIButton!
+    @IBOutlet weak var lblA: UILabel!
+    
+    @IBAction func btnTxtOutLabel(_ sender: Any) {
+        var lbltxt : String
+
+        if txt1.text == "" && txt2.text == "" {lblA.text =  "値を入力してください"}
+        else {
+            lbltxt = (txt1.text ?? "") + " "
+                   + (txt2.text ?? "")
+            lblA.text = lbltxt
+            txt3.text = lbltxt
+        }
+        /*
+        func syori(txt1.text,txt2.text){
+            
+        }
+        */
+    }
+
     var manager: GitHubRepositoryManager!
     
     @IBOutlet weak var tableView: UITableView!
+    //let tableview = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +49,7 @@ class ViewController: UIViewController {
         self.manager.load(user: "apple"){
             [weak self] in self?.tableView?.reloadData()
         }
-        
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{

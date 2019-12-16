@@ -24,6 +24,17 @@ class XCTest2Tests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    /*
+    func testボタンを押して１と２に値が入ってない時にエラーになる(){
+        let vc = ViewController()
+        vc.viewDidLoad()
+        vc.txt1.text = ""
+        vc.txt2.text = ""
+        vc.btnTxtLbl.sendActions(for: .touchUpInside)
+        XCTAssertEqual(vc.lblA.text, "値を入力してください")
+    }
+    */
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
